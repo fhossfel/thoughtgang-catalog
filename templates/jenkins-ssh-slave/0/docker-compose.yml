@@ -1,0 +1,16 @@
+jenkins-ssh-slave:
+  image: "jenkinsci/ssh-slave"
+  ports:
+    - "${PORT}:22"
+  labels:
+    io.rancher.sidekicks: jenkins-ssh-slave-datavolume
+    io.rancher.container.hostname_override: container_name
+  volumes_from:
+    - jenkins-ssh-slave-datavolume
+jenkins-ssh-slave-datavolume:
+  image: "busybox"
+  volumes:
+    - ${volume_work}:/var/opt/jenkins
+  labels:
+    io.rancher.container.start_once: true
+  entrypoint: ["chown", "-R", "1000:1000", "/var/opt/jenkins"]

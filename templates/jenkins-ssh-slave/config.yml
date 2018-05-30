@@ -1,0 +1,5 @@
+name: Jenkins
+description: |
+  Jenkins CI SSH Slave
+version: 0.01
+category: Continuous Integration
