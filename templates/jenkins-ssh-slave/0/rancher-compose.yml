@@ -24,7 +24,3 @@
     options:
       - local
       - rancher-nfs
-jenkins-primary:
-  metadata:
-    plugins: |
-      ${plugins}
