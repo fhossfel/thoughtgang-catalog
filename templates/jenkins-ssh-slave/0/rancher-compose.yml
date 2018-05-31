@@ -1,8 +1,8 @@
 .catalog:
   name: Jenkins
-  version: 2.92-rancher1
+  version: 0.0.1
   description: |
-    Jenkins SSH Slave.
+    Jenkins SSH Slave - Add SSH slave to your Jenkins CI instance.
   questions:
   - variable: "PORT"
     type: "int"
@@ -10,7 +10,7 @@
     description: "Which port should Jenkins listen on?"
     default: 2222
     required: true
-  - variable: ""
+  - variable: "JENKINS_SLAVE_SSH_PUBKEY"
     description: "Work volume to save jenkins data"
     label: "Work volume:"
     required: true
