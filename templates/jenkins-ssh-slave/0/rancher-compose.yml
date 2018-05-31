@@ -3,6 +3,7 @@
   version: 0.0.1
   description: |
     Jenkins SSH Slave - Add SSH slave to your Jenkins CI instance.
+  maintainer: "Thought Gang, Hamburg, DE  <support@thoughtgang.de>"
   questions:
   - variable: "JENKINS_SLAVE_SSH_PUBKEY"
     description: "The public SSH that Jenkins uses to connect to this instance"
