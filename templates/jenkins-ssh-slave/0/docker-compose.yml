@@ -1,7 +1,7 @@
 version: '2'
 volumes:
   jenkins-home:
-    driver: ${volumedriver}
+    driver: ${VOLUME_DRIVER}
 
 services:
   jenkins-ssh-slave:
@@ -15,4 +15,5 @@ services:
       - jenkins-home:/var/opt/jenkins
     environment:
       - JENKINS_AGENT_HOME=/var/opt/jenkins
+      - JENKINS_SLAVE_SSH_PUBKEY="${JENKINS_SLAVE_SSH_PUBKEY}"
       
