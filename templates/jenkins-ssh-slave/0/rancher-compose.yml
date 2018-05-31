@@ -4,17 +4,26 @@
   description: |
     Jenkins SSH Slave - Add SSH slave to your Jenkins CI instance.
   questions:
+  - variable: "JENKINS_SLAVE_SSH_PUBKEY"
+    description: "The public SSH that Jenkins uses to connect to this instance"
+    label: "Public SSH Key"
+    required: true
+    type: "string"
   - variable: "PORT"
     type: "int"
     label: "Port Number"
     description: "Which port should Jenkins listen on?"
     default: 2222
     required: true
-  - variable: "JENKINS_SLAVE_SSH_PUBKEY"
-    description: "The public SSH that Jenkins uses to connect to this instance"
-    label: "Public SSH Key"
+  - variable: "VOLUME_DRIVER"
+    description: "Choose the Volume Driver being used.(Option: local or rancher-nfs)"
+    label: "Volume Driver:"
     required: true
-    type: "string"
+    default: local
+    type: "enum"
+    options:
+      - local
+      - rancher-nfs
 jenkins-primary:
   metadata:
     plugins: |
