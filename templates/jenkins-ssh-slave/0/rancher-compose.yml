@@ -11,10 +11,9 @@
     default: 2222
     required: true
   - variable: "JENKINS_SLAVE_SSH_PUBKEY"
-    description: "Work volume to save jenkins data"
-    label: "Work volume:"
+    description: "The public SSH that Jenkins uses to connect to this instance"
+    label: "Public SSH Key"
     required: true
-    default: "/var/lib/docker/jenkins-ci"
     type: "string"
 jenkins-primary:
   metadata:
