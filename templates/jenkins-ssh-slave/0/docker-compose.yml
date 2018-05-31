@@ -14,6 +14,7 @@ services:
       - jenkins-home:/var/opt/jenkins
     build:
       args:
-        - JENKINS_AGENT_HOME=/var/opt/jenkins
-        - JENKINS_SLAVE_SSH_PUBKEY=${JENKINS_SLAVE_SSH_PUBKEY}
+        JENKINS_AGENT_HOME: /var/opt/jenkins
+    environment:
+      - JENKINS_SLAVE_SSH_PUBKEY=${JENKINS_SLAVE_SSH_PUBKEY}
       
