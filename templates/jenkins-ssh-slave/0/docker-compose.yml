@@ -11,10 +11,7 @@ services:
     labels:
       io.rancher.container.hostname_override: container_name
     volumes:
-      - jenkins-home:/var/opt/jenkins
-    build:
-      args:
-        JENKINS_AGENT_HOME: /var/opt/jenkins
+      - jenkins-home:/home/jenkins
     environment:
       - JENKINS_SLAVE_SSH_PUBKEY=${JENKINS_SLAVE_SSH_PUBKEY}
       
