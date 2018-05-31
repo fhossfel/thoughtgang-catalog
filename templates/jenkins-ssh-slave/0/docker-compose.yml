@@ -13,3 +13,4 @@ jenkins-ssh-slave-datavolume:
     - ${volume_work}:/var/opt/jenkins
   labels:
     io.rancher.container.start_once: true
+  entrypoint: ["chown", "-R", "1000:1000", "/var/opt/jenkins"]
