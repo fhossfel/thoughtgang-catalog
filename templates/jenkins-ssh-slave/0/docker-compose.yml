@@ -10,7 +10,6 @@ services:
       - ${PORT}:22/tcp
     labels:
       io.rancher.container.hostname_override: container_name
-    image: gitlab/gitlab-ce:9.5.10-ce.0
     volumes:
       - jenkins-home:/var/opt/jenkins
     environment:
