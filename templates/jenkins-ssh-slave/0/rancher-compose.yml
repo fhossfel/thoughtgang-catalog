@@ -25,3 +25,15 @@
     options:
       - local
       - rancher-nfs
+
+jenkins-ssh-slave:
+  scale: 1
+  start_on_create: true
+  health_check:
+    port: 22
+    request_line: ''
+    interval: 30000
+    unhealthy_threshold: 3
+    strategy: recreate
+    response_timeout: 3000
+    healthy_threshold: 2
