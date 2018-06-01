@@ -34,6 +34,6 @@ jenkins-ssh-slave:
     request_line: ''
     interval: 30000
     unhealthy_threshold: 3
-    strategy: recreate
+    strategy: none
     response_timeout: 3000
     healthy_threshold: 2
